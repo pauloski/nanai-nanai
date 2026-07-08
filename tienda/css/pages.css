@@ -257,18 +257,28 @@
   color: var(--color-text-dark);
 }
 
-/* Embed de Figma + acciones */
-.figma-embed {
-  position: relative; width: 100%; aspect-ratio: 16 / 9;
-  border-radius: var(--radius-premium); overflow: hidden;
-  border: 1px solid var(--color-line); background: var(--color-bg-sunken);
+/* Lista de recursos del proyecto (Figma, repositorio) */
+.resource-list { display: flex; flex-direction: column; gap: var(--space-4); }
+.resource {
+  display: flex; align-items: center; gap: var(--space-5); flex-wrap: wrap;
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-line); border-radius: var(--radius-premium);
 }
-.figma-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-.figma-actions {
-  display: flex; flex-wrap: wrap; align-items: center;
-  gap: var(--space-3) var(--space-4); margin-top: var(--space-5);
+.resource__icon {
+  flex-shrink: 0; width: 48px; height: 48px; border-radius: var(--radius-sm);
+  display: grid; place-items: center;
+  background: var(--color-bg-sunken); color: var(--color-text-dark);
 }
-.figma-updated { font-size: var(--fs-sm); color: var(--color-text-soft); }
+.resource__body { flex: 1; min-width: 220px; }
+.resource__title { font-size: var(--fs-lg); margin-bottom: 2px; }
+.resource__desc { font-size: var(--fs-sm); color: var(--color-text-muted); }
+.resource__ver {
+  display: inline-block; font-size: var(--fs-2xs); font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-wide); padding: 1px 8px; border-radius: var(--radius-pill);
+  background: var(--color-brand-primary-soft); color: var(--color-brand-primary-dark);
+}
+.resource__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
 
 /* Etiqueta de variante en demos */
 .ds-variant-label {
