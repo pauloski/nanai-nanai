@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design System · Nanai Nanai</title>
+<meta name="description" content="Guía viva de componentes de Nanai Nanai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="../images/logo/Logomark.svg">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<main>
+  <section class="ds-hero"><div class="container">
+    <span class="overline">Design System · Guía viva</span>
+    <h1>Biblioteca de componentes</h1>
+    <p class="lead">Todos los componentes del e-commerce, en aislamiento, con su código y los tokens (CSS Custom Properties) que los controlan.</p>
+    <nav class="ds-nav">
+      <a href="#figma">Figma</a><a href="#colores">Colores</a><a href="#tipografia">Tipografía</a><a href="#botones">Botones</a>
+      <a href="#formularios">Formularios</a><a href="#pildoras">Píldoras y Tags</a><a href="#tarjeta">Tarjeta de producto</a>
+    </nav>
+  </div></section>
+  <div class="container">
+    <section class="ds-block" id="figma">
+      <h2 class="ds-block__title">Archivo de diseño · Figma</h2>
+      <p class="ds-block__intro">El espacio de diseño fuente de este sistema. Explóralo en vivo o descarga el archivo del proyecto.</p>
+      <div class="figma-embed">
+        <iframe title="Nanai — Figma" src="https://embed.figma.com/design/w9iuhwjF1ZtuBhjxXFhxSp/Nanai?node-id=280-5&amp;embed-host=share" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <div class="figma-actions">
+        <a class="btn btn--dark" href="https://www.figma.com/design/w9iuhwjF1ZtuBhjxXFhxSp/Nanai?node-id=280-5&amp;t=eGp2CHxv3Af4ajXo-1" target="_blank" rel="noopener">Abrir en Figma ↗</a>
+        <a class="btn btn--secondary" href="#" download aria-label="Descargar archivo Figma versión 1">Descargar archivo .fig · v1</a>
+        <span class="figma-updated">Actualizado: 8 jul 2026</span>
+      </div>
+    </section>
+    <section class="ds-block" id="colores">
+      <h2 class="ds-block__title">Colores / Tokens</h2>
+      <p class="ds-block__intro">La paleta desaturada de marca y los tres modificadores de territorio. Nunca uses hex directo: siempre <code>var(--token)</code>.</p>
+      <div class="swatch-grid">
+<div class="swatch"><div class="swatch__chip" style="background:#bfa16f"></div>
+  <div class="swatch__meta"><span class="swatch__name">Brand Primary</span><span class="swatch__var">var(--color-brand-primary)</span></div></div>
+<div class="swatch"><div class="swatch__chip" style="background:#faf8f5"></div>
+  <div class="swatch__meta"><span class="swatch__name">BG Main</span><span class="swatch__var">var(--color-bg-main)</span></div></div>
+<div class="swatch"><div class="swatch__chip" style="background:#26211e"></div>
+  <div class="swatch__meta"><span class="swatch__name">Text Dark</span><span class="swatch__var">var(--color-text-dark)</span></div></div>
+<div class="swatch"><div class="swatch__chip" style="background:#6b635d"></div>
+  <div class="swatch__meta"><span class="swatch__name">Text Muted</span><span class="swatch__var">var(--color-text-muted)</span></div></div>
+<div class="swatch"><div class="swatch__chip" style="background:#e6cfcd"></div>
+  <div class="swatch__meta"><span class="swatch__name">Contención</span><span class="swatch__var">var(--color-territorio-contencion)</span></div></div>
+<div class="swatch"><div class="swatch__chip" style="background:#ebd9c5"></div>
+  <div class="swatch__meta"><span class="swatch__name">Memoria</span><span class="swatch__var">var(--color-territorio-memoria)</span></div></div>
+<div class="swatch"><div class="swatch__chip" style="background:#cbdad5"></div>
+  <div class="swatch__meta"><span class="swatch__name">Renacer</span><span class="swatch__var">var(--color-territorio-renacer)</span></div></div>
+<div class="swatch"><div class="swatch__chip" style="background:#e7e0d7"></div>
+  <div class="swatch__meta"><span class="swatch__name">Line</span><span class="swatch__var">var(--color-line)</span></div></div>
+      </div>
+    </section>
+    <section class="ds-block" id="tipografia">
+      <h2 class="ds-block__title">Tipografía</h2>
+      <p class="ds-block__intro">Serif elegante (<strong>Playfair Display</strong>) para títulos; sans limpia (<strong>Inter</strong>) para lectura.</p>
+      
+      <div class="type-row"><div class="type-row__meta">--font-titles · --fs-3xl · Playfair Display</div><div style="font-family:var(--font-titles);font-size:var(--fs-3xl);line-height:1.1">Acompañamos momentos</div></div>
+      <div class="type-row"><div class="type-row__meta">--font-titles · --fs-xl</div><div style="font-family:var(--font-titles);font-size:var(--fs-xl)">Un lenguaje físico para los instantes</div></div>
+      <div class="type-row"><div class="type-row__meta">--font-body · --fs-md · Inter</div><div style="font-size:var(--fs-md);max-width:60ch">Cada caja nace de una pregunta: ¿qué necesita sentir quien la recibe? La tipografía de lectura es limpia, cálida y de alto contraste.</div></div>
+      <div class="type-row"><div class="type-row__meta">.overline · --fs-2xs · uppercase</div><div class="overline">Sistema de acompañamiento</div></div>
+    </section>
+    <section class="ds-block" id="botones">
+      <h2 class="ds-block__title">Átomo · Botones</h2>
+      <p class="ds-block__intro">Bordes tipo píldora (<code>--radius-button</code>), hover suave, sin bordes toscos.</p>
+      <div class="ds-demo">
+  <div class="ds-demo__preview ">
+<a class="btn btn--primary">Botón primario</a>
+    <a class="btn btn--dark">Botón oscuro</a>
+    <a class="btn btn--secondary">Secundario</a>
+    <a class="btn btn--ghost">Ghost</a>
+  </div>
+  <pre class="ds-demo__code">&lt;a class=&quot;btn btn--primary&quot;&gt;Botón primario&lt;/a&gt;
+&lt;a class=&quot;btn btn--dark&quot;&gt;Botón oscuro&lt;/a&gt;
+&lt;a class=&quot;btn btn--secondary&quot;&gt;Secundario&lt;/a&gt;</pre>
+  <div class="ds-demo__meta"><span>Clases: <code>.btn</code> + <code>.btn--primary</code> / <code>.btn--dark</code> / <code>.btn--secondary</code> / <code>.btn--ghost</code></span><span>Radio: <code>--radius-button</code></span></div>
+</div>
+    </section>
+    <section class="ds-block" id="formularios">
+      <h2 class="ds-block__title">Átomo · Formularios</h2>
+      <p class="ds-block__intro">Inputs minimalistas de borde delgado y foco cálido. Incluye contador de caracteres.</p>
+      <div class="ds-demo">
+  <div class="ds-demo__preview ds-demo__preview--plain">
+<div style="width:100%;max-width:420px;display:grid;gap:var(--space-4)">
+      <div class="field"><label class="label">Nombre</label><input class="input" placeholder="Escribe aquí…"></div>
+      <div class="field"><label class="label">Región</label><select class="select"><option>Región Metropolitana</option></select></div>
+      <div class="field"><label class="label">Mensaje</label><textarea class="textarea" placeholder="Tu mensaje…"></textarea></div>
+    </div>
+  </div>
+  <pre class="ds-demo__code">&lt;div class=&quot;field&quot;&gt;
+  &lt;label class=&quot;label&quot;&gt;Nombre&lt;/label&gt;
+  &lt;input class=&quot;input&quot; placeholder=&quot;Escribe aquí…&quot;&gt;
+&lt;/div&gt;</pre>
+  <div class="ds-demo__meta"><span>Clases: <code>.field</code>, <code>.label</code>, <code>.input</code>, <code>.textarea</code>, <code>.select</code></span></div>
+</div>
+    </section>
+    <section class="ds-block" id="pildoras">
+      <h2 class="ds-block__title">Átomos · Píldoras, Tags y Rating</h2>
+      <p class="ds-block__intro">Píldoras interactivas para adicionales; tags cromáticos por territorio; valoración.</p>
+      <div class="ds-demo">
+  <div class="ds-demo__preview ">
+<button class="pill">Sin seleccionar</button>
+    <button class="pill is-selected">Seleccionada</button>
+    <span class="tag tag--contencion">Contención</span>
+    <span class="tag tag--memoria">Memoria</span>
+    <span class="tag tag--renacer">Renacer</span>
+    <span class="rating">★★★★★ <span class="rating__count">7 Reseñas</span></span>
+  </div>
+  <pre class="ds-demo__code">&lt;button class=&quot;pill is-selected&quot;&gt;Seleccionada&lt;/button&gt;
+&lt;span class=&quot;tag tag--contencion&quot;&gt;Contención&lt;/span&gt;</pre>
+  <div class="ds-demo__meta"><span>Píldora: <code>.pill</code> + <code>.is-selected</code></span><span>Tags: <code>.tag--{territorio}</code></span></div>
+</div>
+    </section>
+    <section class="ds-block" id="tarjeta" style="border-bottom:0">
+      <h2 class="ds-block__title">Organismo · Tarjeta de producto</h2>
+      <p class="ds-block__intro">Dos variantes sobre la misma base <code>.product-card</code>: la <strong>completa</strong> (catálogo · PLP) con descripción, aviso de stock y botón "Agregar al carro" que aparece al <em>hover</em>; y la <strong>mini</strong> (home), más compacta. El precio va en sans-serif <strong>sin</strong> sufijo CLP y el título enlaza al detalle.</p>
+      <div class="ds-demo">
+  <div class="ds-demo__preview ds-demo__preview--plain" style="gap:var(--space-7);align-items:flex-start">
+      <div style="width:280px;max-width:100%">
+        <p class="ds-variant-label">Completa · Catálogo</p>
+        <article class="product-card" data-territory="memoria">
+          <a class="product-card__media" href="producto.html?id=memoria" aria-label="Caja Memoria">
+            <span class="tag tag--memoria product-card__tag">Memoria</span>
+            <img src="../images/product/prod-004.png" alt="Caja Memoria" loading="lazy">
+          </a>
+          <div class="product-card__body">
+            <h3 class="product-card__title"><a href="producto.html?id=memoria">Caja Memoria</a></h3>
+            <p class="product-card__desc">Portarretrato, vela y cuaderno de recuerdos para honrar lo que fue.</p>
+            <p class="product-card__stock">Quedan 10 unidades</p>
+            <div class="product-card__foot"><span class="product-card__price">$42.000</span></div>
+            <button type="button" class="product-card__add btn btn--dark">Agregar al carro</button>
+          </div>
+        </article>
+      </div>
+      <div style="width:240px;max-width:100%">
+        <p class="ds-variant-label">Mini · Home</p>
+        <article class="product-card product-card--mini" data-territory="memoria">
+          <a class="product-card__media" href="producto.html?id=memoria" aria-label="Caja Memoria">
+            <span class="tag tag--memoria product-card__tag">Memoria</span>
+            <img src="../images/product/prod-004.png" alt="Caja Memoria" loading="lazy">
+          </a>
+          <div class="product-card__body">
+            <h3 class="product-card__title"><a href="producto.html?id=memoria">Caja Memoria</a></h3>
+            <div class="product-card__foot"><span class="product-card__price">$42.000</span></div>
+          </div>
+        </article>
+      </div>
+  </div>
+  <pre class="ds-demo__code">&lt;!-- Completa (catálogo) --&gt;
+&lt;article class=&quot;product-card&quot; data-territory=&quot;memoria&quot;&gt;…
+  &lt;button class=&quot;product-card__add btn btn--dark&quot;&gt;Agregar al carro&lt;/button&gt;
+&lt;/article&gt;
+
+&lt;!-- Mini (home) --&gt;
+&lt;article class=&quot;product-card product-card--mini&quot; data-territory=&quot;memoria&quot;&gt;…&lt;/article&gt;</pre>
+  <div class="ds-demo__meta"><span>Completa: <code>.product-card</code></span><span>Mini: <code>.product-card--mini</code></span><span>CTA hover: <code>.product-card__add</code></span><span>Agotado: <code>.product-card--soldout</code></span></div>
+</div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

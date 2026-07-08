@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout · Nanai Nanai</title>
+<meta name="description" content="Finaliza tu compra en Nanai Nanai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="../images/logo/Logomark.svg">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a class="navbar__brand" href="index.html" aria-label="Nanai Nanai · Inicio">
+      <img src="../images/logo/landscape.svg" alt="Nanai Nanai">
+    </a>
+    <nav class="navbar__links" aria-label="Navegación principal">
+      <a class="navbar__link" href="index.html">Inicio</a>
+      <a class="navbar__link" href="catalogo.html">Catálogo</a>
+      <a class="navbar__link" href="nosotros.html">Nosotros</a>
+      <a class="navbar__link" href="contacto.html">Contacto</a>
+    </nav>
+    <div class="navbar__actions">
+      <label class="search">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+        <input type="search" placeholder="Buscar una caja…" aria-label="Buscar productos">
+      </label>
+      <button class="icon-btn" data-drawer-open aria-label="Abrir carrito">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h13l-1.3 8.5a2 2 0 0 1-2 1.7H9.3a2 2 0 0 1-2-1.7L6 4H3"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg><span class="badge-count" data-cart-badge>0</span>
+      </button>
+      <button class="icon-btn navbar__burger" data-burger aria-label="Abrir menú" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="overlay" data-overlay></div>
+<aside class="drawer" data-drawer aria-hidden="true" aria-label="Carrito de compra">
+  <div class="drawer__head">
+    <h2 class="drawer__title">Tu carrito</h2>
+    <button class="icon-btn" data-drawer-close aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="drawer__body" data-drawer-lines></div>
+  <div class="drawer__foot" data-drawer-foot>
+    <div class="summary__row summary__row--total"><span>Subtotal</span><span class="price" data-drawer-subtotal>—</span></div>
+    <a class="btn btn--dark btn--block btn--lg" href="checkout.html" style="margin-top:var(--space-4)">Ir a pagar</a>
+    <a class="btn btn--ghost btn--block" href="carrito.html" style="margin-top:var(--space-2)">Ver carrito completo</a>
+  </div>
+</aside>
+<main>
+  <section class="section--tight" style="padding-top:var(--space-7)">
+    <div class="container">
+      <div class="section-head"><span class="overline">Checkout seguro</span><h1>Finaliza tu pedido</h1></div>
+      <div class="checkout-layout">
+        <form class="checkout-form" onsubmit="return false">
+          <div class="form-block">
+            <h2 class="form-block__title"><span class="form-block__num">1</span> Contacto</h2>
+            <div class="field"><label class="label" for="email">Correo electrónico</label><input class="input" id="email" type="email" placeholder="tucorreo@ejemplo.cl"></div>
+          </div>
+          <div class="form-block">
+            <h2 class="form-block__title"><span class="form-block__num">2</span> Despacho</h2>
+            <div class="form-row">
+              <div class="field"><label class="label" for="nombre">Nombre</label><input class="input" id="nombre" placeholder="Nombre"></div>
+              <div class="field"><label class="label" for="apellido">Apellido</label><input class="input" id="apellido" placeholder="Apellido"></div>
+            </div>
+            <div class="field"><label class="label" for="dir">Dirección</label><input class="input" id="dir" placeholder="Calle y número"></div>
+            <div class="form-row">
+              <div class="field">
+                <label class="label" for="region">Región</label>
+                <select class="select" id="region" data-checkout-region>
+                  <option>Región Metropolitana</option><option>Valparaíso</option><option>Biobío</option><option>Araucanía</option><option>Otra región</option>
+                </select>
+              </div>
+              <div class="field">
+                <label class="label" for="comuna">Comuna</label>
+                <select class="select" id="comuna"><option>Providencia</option><option>Las Condes</option><option>Ñuñoa</option><option>Santiago</option><option>Maipú</option></select>
+              </div>
+            </div>
+            <div class="field"><label class="label" for="tel">Teléfono</label><input class="input" id="tel" placeholder="+56 9 ...."></div>
+          </div>
+          <div class="form-block">
+            <h2 class="form-block__title"><span class="form-block__num">3</span> Pago</h2>
+            <div class="field"><label class="label" for="tarjeta">Número de tarjeta</label><input class="input" id="tarjeta" placeholder="0000 0000 0000 0000"></div>
+            <div class="form-row">
+              <div class="field"><label class="label" for="venc">Vencimiento</label><input class="input" id="venc" placeholder="MM / AA"></div>
+              <div class="field"><label class="label" for="cvv">CVV</label><input class="input" id="cvv" placeholder="123"></div>
+            </div>
+            <p class="soft" style="font-size:var(--fs-xs)">Serás redirigido a WebPay para completar el pago de forma segura.</p>
+          </div>
+        </form>
+
+        <aside class="checkout-summary">
+          <h3 style="font-size:var(--fs-lg);margin-bottom:var(--space-5)">Resumen del pedido</h3>
+          <div class="checkout-summary__scroll">
+            <div data-checkout-lines></div>
+            <div data-checkout-notes></div>
+            <hr class="divider">
+            <div class="summary__row"><span>Subtotal</span><span data-checkout-subtotal>—</span></div>
+            <div class="summary__row"><span>Envío</span><span data-checkout-ship>—</span></div>
+            <div class="summary__row summary__row--total"><span>Total</span><span class="price" data-checkout-total>—</span></div>
+            <button class="btn btn--primary btn--block btn--lg" data-place-order>Finalizar compra</button>
+            <p class="soft" style="font-size:var(--fs-xs);text-align:center;margin-top:var(--space-2)">Impuesto incluido · Compra 100% segura</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../images/logo/landscape_white.svg" alt="Nanai Nanai">
+        <p>No regalamos objetos. Acompañamos momentos. Cajas sensoriales para los instantes en que las palabras no alcanzan.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Navegación</h4>
+        <ul><li><a href="index.html">Inicio</a></li><li><a href="catalogo.html">Catálogo</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="contacto.html">Contacto</a></li></ul>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <ul><li><a href="terminos.html">Términos y condiciones</a></li><li><a href="privacidad.html">Política de privacidad</a></li></ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Nanai Nanai · Hecho con cuidado en Chile</span>
+      <div class="footer__social"><a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></div>
+    </div>
+  </div>
+</footer>
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/tienda.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+/* ============================================================
+   NANAI NANAI · about.css
+   Página "Nosotros" · layout editorial de clase mundial.
+   Basado en el Manual de Marca (misión, valores, territorios).
+   ============================================================ */
+
+.about { overflow: clip; }
+.about section > .container { position: relative; }
+
+/* Números siempre en sans del proyecto (tabular) */
+.about .num,
+.value__n { font-family: var(--font-body); font-variant-numeric: tabular-nums; }
+
+/* ---------- 1. HERO editorial ---------- */
+.about-hero {
+  padding-block: var(--space-9) var(--space-8);
+  background:
+    radial-gradient(120% 90% at 100% 0%, var(--color-brand-primary-soft) 0%, transparent 55%),
+    var(--color-bg-main);
+  border-bottom: 1px solid var(--color-line);
+}
+.about-hero__grid {
+  display: grid; grid-template-columns: 1.05fr 0.95fr;
+  gap: var(--space-8); align-items: center;
+}
+.about-hero__title {
+  font-family: var(--font-titles);
+  font-size: clamp(2.4rem, 5vw, var(--fs-4xl));
+  line-height: 1.04; letter-spacing: -0.01em;
+  margin: var(--space-3) 0 var(--space-4);
+}
+.about-hero__title em { font-style: italic; color: var(--color-brand-primary-dark); }
+.about-hero__lead {
+  font-family: var(--font-titles); font-style: italic;
+  font-size: var(--fs-xl); line-height: 1.5;
+  color: var(--color-text-muted); max-width: 40ch;
+}
+.about-hero__meta {
+  display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap;
+  margin-top: var(--space-6);
+  font-size: var(--fs-xs); letter-spacing: var(--tracking-wide);
+  text-transform: uppercase; color: var(--color-text-soft);
+}
+.about-hero__text { min-width: 0; }
+.about-hero__title { text-wrap: balance; }
+.about-hero__meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--color-brand-primary); }
+.about-hero__media {
+  aspect-ratio: 4 / 5; border-radius: var(--radius-premium); overflow: hidden;
+  background: var(--color-bg-sunken); box-shadow: var(--shadow-md);
+}
+.about-hero__media img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- 2. Símbolo / significado ---------- */
+.about-symbol__inner {
+  display: grid; grid-template-columns: auto 1fr; gap: var(--space-8);
+  align-items: center; max-width: 920px; margin-inline: auto;
+}
+.about-symbol__mark {
+  width: 128px; height: 128px; padding: var(--space-5);
+  border-radius: var(--radius-premium);
+  background: var(--color-bg-elevated); border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-sm);
+}
+.about-symbol__text h2 { font-size: var(--fs-2xl); margin: var(--space-2) 0 var(--space-3); }
+.about-symbol__text p { color: var(--color-text-muted); line-height: var(--lh-body); max-width: 54ch; }
+
+/* ---------- 3. Misión & Visión ---------- */
+.about-mv__grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+.about-mv__card {
+  padding: var(--space-7);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-line); border-radius: var(--radius-premium);
+  position: relative;
+}
+.about-mv__card::before {
+  content: ""; position: absolute; top: 0; left: var(--space-7); right: var(--space-7);
+  height: 2px; background: var(--color-brand-primary); border-radius: 2px;
+}
+.about-mv__k {
+  display: block; font-size: var(--fs-xs); letter-spacing: var(--tracking-wider);
+  text-transform: uppercase; color: var(--color-brand-primary-dark);
+  margin-bottom: var(--space-3);
+}
+.about-mv__card p {
+  font-family: var(--font-titles); font-size: var(--fs-lg);
+  line-height: 1.55; color: var(--color-text-dark);
+}
+
+/* ---------- 4. Valores ---------- */
+.about-values__grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+.value { padding-top: var(--space-4); border-top: 1px solid var(--color-line); }
+.value__n {
+  display: block; font-size: var(--fs-sm); font-weight: var(--fw-semibold);
+  color: var(--color-brand-primary); margin-bottom: var(--space-3);
+}
+.value h3 { font-size: var(--fs-xl); margin-bottom: var(--space-2); }
+.value p { font-size: var(--fs-sm); color: var(--color-text-muted); line-height: var(--lh-body); }
+
+/* ---------- 5. Territorios ---------- */
+.about-terr__grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5);
+  margin-top: var(--space-8);
+}
+.terr-card {
+  background: var(--color-bg-elevated); border: 1px solid var(--color-line);
+  border-radius: var(--radius-premium); padding: var(--space-6);
+  display: flex; flex-direction: column; gap: var(--space-2);
+  transition: var(--transition-smooth, all .25s ease);
+}
+.terr-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.terr-card__num {
+  font-family: var(--font-titles); font-size: 2.5rem; line-height: 1;
+  color: var(--t-ink); opacity: 0.9;
+}
+.terr-card__name { font-size: var(--fs-2xl); color: var(--color-text-dark); }
+.terr-card__tag {
+  font-family: var(--font-titles); font-style: italic;
+  font-size: var(--fs-md); color: var(--t-ink); margin-bottom: var(--space-2);
+}
+.terr-card__desc { font-size: var(--fs-sm); color: var(--color-text-muted); line-height: var(--lh-body); flex: 1; }
+.terr-card__chips { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-4); list-style: none; }
+.terr-card__chips li {
+  font-size: var(--fs-2xs); letter-spacing: var(--tracking-wide);
+  padding: 4px 10px; border-radius: var(--radius-pill);
+  background: var(--t-tint); color: var(--t-ink); font-weight: var(--fw-semibold);
+}
+.terr-card[data-t="contencion"] { --t-tint: var(--color-territorio-contencion); --t-ink: var(--color-territorio-contencion-ink); }
+.terr-card[data-t="memoria"]    { --t-tint: var(--color-territorio-memoria);    --t-ink: var(--color-territorio-memoria-ink); }
+.terr-card[data-t="renacer"]    { --t-tint: var(--color-territorio-renacer);    --t-ink: var(--color-territorio-renacer-ink); }
+.terr-card__bar { height: 4px; border-radius: 2px; background: var(--t-ink); width: 44px; margin-bottom: var(--space-2); }
+
+/* ---------- 6. Proceso / craft ---------- */
+.about-craft__grid {
+  display: grid; grid-template-columns: 0.9fr 1.1fr; gap: var(--space-8); align-items: center;
+}
+.about-craft__media {
+  aspect-ratio: 4 / 5; border-radius: var(--radius-premium); overflow: hidden;
+  background: var(--color-bg-sunken); box-shadow: var(--shadow-sm);
+}
+.about-craft__media img { width: 100%; height: 100%; object-fit: cover; }
+.about-craft__text h2 { font-size: var(--fs-3xl); margin: var(--space-2) 0 var(--space-4); }
+.about-craft__text p { color: var(--color-text-muted); line-height: var(--lh-body); max-width: 52ch; }
+.about-craft__text blockquote {
+  margin: var(--space-6) 0 0; padding-left: var(--space-5);
+  border-left: 3px solid var(--color-brand-primary);
+  font-family: var(--font-titles); font-style: italic; font-size: var(--fs-xl);
+  line-height: 1.5; color: var(--color-text-dark);
+}
+
+/* ---------- 7. CTA ---------- */
+.about-cta { padding-block: var(--space-9); background: var(--color-text-dark); }
+.about-cta__inner { text-align: center; max-width: 620px; margin-inline: auto; }
+.about-cta__inner h2 { color: #fff; font-size: var(--fs-3xl); margin-bottom: var(--space-3); }
+.about-cta__inner p { color: rgba(255,255,255,0.66); margin-bottom: var(--space-6); font-size: var(--fs-lg); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .about-hero__grid { grid-template-columns: 1fr; gap: var(--space-6); }
+  .about-hero__media { order: -1; aspect-ratio: 16 / 10; }
+  .about-symbol__inner { grid-template-columns: 1fr; gap: var(--space-5); text-align: center; justify-items: center; }
+  .about-values__grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-5); }
+  .about-terr__grid { grid-template-columns: 1fr; }
+  .about-craft__grid { grid-template-columns: 1fr; }
+  .about-craft__media { order: -1; aspect-ratio: 16 / 10; }
+}
+@media (max-width: 520px) {
+  .about-hero__title { font-size: clamp(1.9rem, 8.5vw, 2.4rem); }
+  .about-hero__lead { font-size: var(--fs-lg); }
+  .about-mv__grid { grid-template-columns: 1fr; }
+  .about-values__grid { grid-template-columns: 1fr; }
+  .about-craft__text h2, .about-cta__inner h2 { font-size: var(--fs-2xl); }
+}

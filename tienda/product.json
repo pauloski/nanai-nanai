@@ -1,0 +1,149 @@
+[
+  {
+    "id": "PROD-01",
+    "categoria": "Contención",
+    "nombreDelProducto": "Caja Abrigo",
+    "descripcionComercial": "Un refugio cálido en momentos difíciles. Diseñada para abrazar el alma cuando más se necesita, combinando texturas suaves y aromas delicados que transmiten calma, cobijo y protección.",
+    "itemsIncluidos": [
+      "Manta de alpaca",
+      "Té",
+      "Vela",
+      "Carta",
+      "Calcetines suaves",
+      "Carta personalizada",
+      "Tarjeta para el remitente",
+      "Ritual simbólico",
+      "Objeto recuerdo"
+    ],
+    "personalizable": true,
+    "costoEstimado": 22000,
+    "precioDeVenta": 45000,
+    "stockDisponible": 20
+  },
+  {
+    "id": "PROD-02",
+    "categoria": "Contención",
+    "nombreDelProducto": "Caja Calidez",
+    "descripcionComercial": "Un espacio para encender la paz en medio de la rutina o la adversidad. Una selección delicada que invita a la pausa, al autocuidado y a reconectarse con los pequeños e íntimos placeres cotidianos.",
+    "itemsIncluidos": [
+      "Café o té premium",
+      "Tazón",
+      "Galletas artesanales",
+      "Miel",
+      "Vela",
+      "Carta personalizada",
+      "Tarjeta para el remitente",
+      "Ritual simbólico",
+      "Objeto recuerdo"
+    ],
+    "personalizable": false,
+    "costoEstimado": 18000,
+    "precioDeVenta": 38000,
+    "stockDisponible": 40
+  },
+  {
+    "id": "PROD-03",
+    "categoria": "Contención",
+    "nombreDelProducto": "Caja Te Acompaño",
+    "descripcionComercial": "La presencia perfecta cuando las palabras no alcanzan. Un puente ideal para entregar un apoyo silencioso pero profundo, promoviendo un espacio seguro para la introspección y el desahogo emocional.",
+    "itemsIncluidos": [
+      "Mezcla de infusiones",
+      "Miel",
+      "Cuaderno",
+      "Lápiz",
+      "Carta",
+      "Carta personalizada",
+      "Tarjeta para el remitente",
+      "Ritual simbólico",
+      "Objeto recuerdo"
+    ],
+    "personalizable": true,
+    "costoEstimado": 16500,
+    "precioDeVenta": 35000,
+    "stockDisponible": 50
+  },
+  {
+    "id": "PROD-04",
+    "categoria": "Memoria",
+    "nombreDelProducto": "Caja Memoria",
+    "descripcionComercial": "Un homenaje al amor que trasciende el tiempo. Espacio sagrado y sutil creado para honrar los recuerdos, sanar a través de pequeños rituales y mantener viva la esencia de quienes siempre nos acompañarán.",
+    "itemsIncluidos": [
+      "Portarretrato",
+      "Vela",
+      "Cuaderno de recuerdos",
+      "Semillas para plantar",
+      "Tarjeta conmemorativa",
+      "Carta personalizada",
+      "Tarjeta para el remitente",
+      "Ritual simbólico",
+      "Objeto recuerdo"
+    ],
+    "personalizable": true,
+    "costoEstimado": 20000,
+    "precioDeVenta": 42000,
+    "stockDisponible": 10
+  },
+  {
+    "id": "PROD-05",
+    "categoria": "Memoria",
+    "nombreDelProducto": "Caja Dulzura",
+    "descripcionComercial": "Contención y ternura pensada especialmente para los más pequeños. Un bálsamo de color, dulzura y creatividad diseñado para abrazar sus emociones y acompañar sus procesos de forma lúdica y amorosa.",
+    "itemsIncluidos": [
+      "Chocolates",
+      "Dulces artesanales",
+      "Libro ilustrado",
+      "Cuaderno",
+      "Lápices de colores",
+      "Carta personalizada",
+      "Tarjeta para el remitente",
+      "Ritual simbólico",
+      "Objeto recuerdo"
+    ],
+    "personalizable": false,
+    "costoEstimado": 15000,
+    "precioDeVenta": 32000,
+    "stockDisponible": 50
+  },
+  {
+    "id": "PROD-06",
+    "categoria": "Renacer",
+    "nombreDelProducto": "Caja Cuidado para Ti",
+    "descripcionComercial": "Un ritual íntimo de renovación y amor propio para celebrar nuevos comienzos o transiciones importantes. Un espacio de bienestar absoluto para mimar el cuerpo, calmar la mente y reconectar con la energía vital.",
+    "itemsIncluidos": [
+      "Sales de baño",
+      "Jabones",
+      "Aceites",
+      "Mascarilla facial",
+      "Té relajante",
+      "Carta personalizada",
+      "Tarjeta para el remitente",
+      "Ritual simbólico",
+      "Objeto recuerdo"
+    ],
+    "personalizable": false,
+    "costoEstimado": 19000,
+    "precioDeVenta": 40000,
+    "stockDisponible": 14
+  },
+  {
+    "id": "PROD-07",
+    "categoria": "Renacer",
+    "nombreDelProducto": "Caja Te Festejo",
+    "descripcionComercial": "Para brindar con el alma por los logros, las nuevas etapas y las alegrías de la vida. Una celebración sofisticada, cálida y emotiva, diseñada minuciosamente para atesorar momentos felices y significativos.",
+    "itemsIncluidos": [
+      "Vino premium",
+      "Copas",
+      "Tabla pequeña",
+      "Chocolates",
+      "Tarjeta de celebración",
+      "Carta personalizada",
+      "Tarjeta para el remitente",
+      "Ritual simbólico",
+      "Objeto recuerdo"
+    ],
+    "personalizable": true,
+    "costoEstimado": 26000,
+    "precioDeVenta": 55000,
+    "stockDisponible": 30
+  }
+]

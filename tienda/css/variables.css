@@ -1,0 +1,123 @@
+/* ============================================================
+   NANAI NANAI · E-COMMERCE MVP
+   variables.css — Design Tokens (única fuente de verdad)
+   ------------------------------------------------------------
+   Todo el sistema visual se controla desde aquí. Ningún valor
+   cromático, tipográfico ni de espaciado debe escribirse
+   "hardcodeado" en los componentes: siempre vía var(--token).
+   ============================================================ */
+
+:root {
+
+  /* ----------------------------------------------------------
+     1. PALETA DE MARCA
+     ---------------------------------------------------------- */
+  --color-brand-primary: #bfa16f;   /* Dorado soft / Ocre · CTA y acentos     */
+  --color-brand-primary-dark: #a5885a; /* Hover del dorado                     */
+  --color-brand-primary-soft: #f0e8db; /* Wash dorado para fondos suaves       */
+
+  --color-bg-main:  #faf8f5;         /* Fondo general crema / off-white        */
+  --color-bg-elevated: #ffffff;      /* Superficies (cards, panels)            */
+  --color-bg-sunken: #f3efe9;        /* Fondos hundidos / secciones alternas   */
+
+  --color-text-dark:  #26211e;       /* Gris casi negro · máxima elegancia     */
+  --color-text-muted: #6b635d;       /* Gris medio · descripciones             */
+  --color-text-soft:  #9a938c;       /* Gris claro · metadatos, captions       */
+
+  --color-line:  #e7e0d7;            /* Bordes y divisores sutiles             */
+  --color-line-strong: #d8cfc2;      /* Bordes de inputs / foco                */
+
+  /* ----------------------------------------------------------
+     2. TERRITORIOS (modificadores de componentes)
+     Cada territorio = tinte pálido (bg) + tinta profunda (ink)
+     para asegurar contraste AA en tags y chips.
+     ---------------------------------------------------------- */
+  --color-territorio-contencion:      #e6cfcd;  /* Rosa viejo pálido           */
+  --color-territorio-contencion-ink:  #8a5a56;
+  --color-territorio-memoria:         #ebd9c5;  /* Beige cálido                */
+  --color-territorio-memoria-ink:     #8a6b45;
+  --color-territorio-renacer:         #cbdad5;  /* Verde/azul agua apagado     */
+  --color-territorio-renacer-ink:     #4f6f63;
+
+  /* ----------------------------------------------------------
+     3. ESTADO / FEEDBACK
+     ---------------------------------------------------------- */
+  --color-success: #6f8f7a;
+  --color-danger:  #b06a5f;
+  --color-star:    #d9b24a;          /* Estrellas de rating                    */
+  --color-overlay: rgba(38, 33, 30, 0.55); /* Fondo modal / drawer            */
+
+  /* ----------------------------------------------------------
+     4. TIPOGRAFÍA
+     ---------------------------------------------------------- */
+  --font-titles: 'Playfair Display', 'Times New Roman', serif;
+  --font-body:   'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Escala tipográfica modular (base 16px) */
+  --fs-2xs: 0.6875rem;   /* 11px · tags, overlines            */
+  --fs-xs:  0.75rem;     /* 12px · captions                   */
+  --fs-sm:  0.875rem;    /* 14px · UI, labels                 */
+  --fs-md:  1rem;        /* 16px · cuerpo                     */
+  --fs-lg:  1.125rem;    /* 18px · lead                       */
+  --fs-xl:  1.5rem;      /* 24px · subtítulos                 */
+  --fs-2xl: 2rem;        /* 32px · h2                         */
+  --fs-3xl: 2.75rem;     /* 44px · h1                         */
+  --fs-4xl: 3.75rem;     /* 60px · hero display               */
+
+  --lh-tight: 1.12;
+  --lh-snug:  1.3;
+  --lh-body:  1.65;
+
+  --tracking-wide:  0.08em;
+  --tracking-wider: 0.16em;   /* overlines en mayúsculas       */
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semibold: 600;
+  --fw-bold:    700;
+
+  /* ----------------------------------------------------------
+     5. ESPACIADO (escala 4px)
+     ---------------------------------------------------------- */
+  --space-1:  0.25rem;   /* 4px  */
+  --space-2:  0.5rem;    /* 8px  */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.5rem;    /* 24px */
+  --space-6:  2rem;      /* 32px */
+  --space-7:  2.5rem;    /* 40px */
+  --space-8:  3rem;      /* 48px */
+  --space-9:  4rem;      /* 64px */
+  --space-10: 6rem;      /* 96px */
+
+  /* ----------------------------------------------------------
+     6. BORDES, RADIOS Y SOMBRAS
+     ---------------------------------------------------------- */
+  --radius-premium: 16px;   /* imágenes, cards                */
+  --radius-button:  24px;   /* botones tipo píldora           */
+  --radius-sm:      8px;     /* inputs, chips                 */
+  --radius-pill:    999px;
+
+  --border-hairline: 1px solid var(--color-line);
+
+  --shadow-sm:  0 1px 2px rgba(38, 33, 30, 0.05);
+  --shadow-md:  0 8px 24px -12px rgba(38, 33, 30, 0.18);
+  --shadow-lg:  0 24px 60px -24px rgba(38, 33, 30, 0.28);
+
+  /* ----------------------------------------------------------
+     7. LAYOUT
+     ---------------------------------------------------------- */
+  --container-max: 1200px;
+  --container-pad: var(--space-5);
+  --navbar-h: 76px;
+
+  /* ----------------------------------------------------------
+     8. MOVIMIENTO Y ELEVACIÓN
+     ---------------------------------------------------------- */
+  --transition-smooth: all 0.3s ease;
+  --transition-fast: all 0.18s ease;
+
+  --z-drawer:  60;
+  --z-navbar:  50;
+  --z-overlay: 55;
+}

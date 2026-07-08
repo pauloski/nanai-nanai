@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pedido confirmado · Nanai Nanai</title>
+<meta name="description" content="Gracias por tu compra en Nanai Nanai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="../images/logo/Logomark.svg">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a class="navbar__brand" href="index.html" aria-label="Nanai Nanai · Inicio">
+      <img src="../images/logo/landscape.svg" alt="Nanai Nanai">
+    </a>
+    <nav class="navbar__links" aria-label="Navegación principal">
+      <a class="navbar__link" href="index.html">Inicio</a>
+      <a class="navbar__link" href="catalogo.html">Catálogo</a>
+      <a class="navbar__link" href="nosotros.html">Nosotros</a>
+      <a class="navbar__link" href="contacto.html">Contacto</a>
+    </nav>
+    <div class="navbar__actions">
+      <label class="search">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+        <input type="search" placeholder="Buscar una caja…" aria-label="Buscar productos">
+      </label>
+      <button class="icon-btn" data-drawer-open aria-label="Abrir carrito">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h13l-1.3 8.5a2 2 0 0 1-2 1.7H9.3a2 2 0 0 1-2-1.7L6 4H3"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg><span class="badge-count" data-cart-badge>0</span>
+      </button>
+      <button class="icon-btn navbar__burger" data-burger aria-label="Abrir menú" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="overlay" data-overlay></div>
+<aside class="drawer" data-drawer aria-hidden="true" aria-label="Carrito de compra">
+  <div class="drawer__head">
+    <h2 class="drawer__title">Tu carrito</h2>
+    <button class="icon-btn" data-drawer-close aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="drawer__body" data-drawer-lines></div>
+  <div class="drawer__foot" data-drawer-foot>
+    <div class="summary__row summary__row--total"><span>Subtotal</span><span class="price" data-drawer-subtotal>—</span></div>
+    <a class="btn btn--dark btn--block btn--lg" href="checkout.html" style="margin-top:var(--space-4)">Ir a pagar</a>
+    <a class="btn btn--ghost btn--block" href="carrito.html" style="margin-top:var(--space-2)">Ver carrito completo</a>
+  </div>
+</aside>
+<main>
+  <section class="section" style="padding-top:var(--space-8)">
+    <div class="container" style="max-width:720px">
+      <div class="confirm">
+        <div class="confirm__icon"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <span class="overline">Pago aprobado · WebPay</span>
+        <h1>Gracias por acompañar</h1>
+        <p class="lead">Tu pedido fue confirmado. Enviamos el detalle a tu correo y prepararemos tu caja con el mayor cuidado.</p>
+
+        <div class="confirm__card" data-order-card>
+          <p class="muted">Cargando tu pedido…</p>
+        </div>
+
+        <div class="cluster" style="justify-content:center;margin-top:var(--space-6)">
+          <a class="btn btn--dark btn--lg" href="index.html">Volver al inicio</a>
+          <a class="btn btn--secondary btn--lg" href="catalogo.html">Seguir explorando</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script>
+(function(){
+  var raw = localStorage.getItem('nanai_last_order');
+  var card = document.querySelector('[data-order-card]');
+  if(!raw){ card.innerHTML = '<p class="muted">No encontramos un pedido reciente.</p>'; return; }
+  var o = JSON.parse(raw), clp = NANAI.clp;
+  var lines = o.items.map(function(l){
+    var extras = (l.adicionales||[]).map(function(a){return a.label;}).join(', ');
+    var unit = l.base + (l.adicionales||[]).reduce(function(s,a){return s+a.price;},0);
+    return '<div class="mini-line">'+
+      '<div class="mini-line__media"><img src="../images/product/'+l.image+'" alt="'+l.name+'"></div>'+
+      '<div style="flex:1"><strong style="font-family:var(--font-titles)">'+l.name+'</strong>'+
+      '<div class="soft" style="font-size:var(--fs-xs)">Cantidad: '+l.qty+(extras?' · '+extras:'')+'</div></div>'+
+      '<span style="font-weight:600">'+clp(unit*l.qty)+'</span></div>';
+  }).join('');
+  card.innerHTML =
+    '<div class="confirm__row"><span class="soft">N° de pedido</span><strong>'+o.number+'</strong></div>'+
+    '<div class="confirm__row"><span class="soft">Fecha</span><span>'+o.date+'</span></div>'+
+    '<div class="confirm__row"><span class="soft">Despacho</span><span>'+o.region+'</span></div>'+
+    '<hr class="divider" style="margin:var(--space-4) 0">'+ lines +
+    '<hr class="divider" style="margin:var(--space-4) 0">'+
+    '<div class="summary__row"><span>Subtotal</span><span>'+clp(o.subtotal)+'</span></div>'+
+    '<div class="summary__row"><span>Envío</span><span>'+clp(o.ship)+'</span></div>'+
+    '<div class="summary__row summary__row--total"><span>Total pagado</span><span class="price">'+clp(o.total)+'</span></div>';
+})();
+</script>
+<script src="js/tienda.js"></script>
+</body>
+</html>

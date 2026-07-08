@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Producto · Nanai Nanai</title>
+<meta name="description" content="Detalle de producto Nanai Nanai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="../images/logo/Logomark.svg">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a class="navbar__brand" href="index.html" aria-label="Nanai Nanai · Inicio">
+      <img src="../images/logo/landscape.svg" alt="Nanai Nanai">
+    </a>
+    <nav class="navbar__links" aria-label="Navegación principal">
+      <a class="navbar__link" href="index.html">Inicio</a>
+      <a class="navbar__link is-active" href="catalogo.html">Catálogo</a>
+      <a class="navbar__link" href="nosotros.html">Nosotros</a>
+      <a class="navbar__link" href="contacto.html">Contacto</a>
+    </nav>
+    <div class="navbar__actions">
+      <label class="search">
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+        <input type="search" placeholder="Buscar una caja…" aria-label="Buscar productos">
+      </label>
+      <button class="icon-btn" data-drawer-open aria-label="Abrir carrito">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h13l-1.3 8.5a2 2 0 0 1-2 1.7H9.3a2 2 0 0 1-2-1.7L6 4H3"/><circle cx="9.5" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg><span class="badge-count" data-cart-badge>0</span>
+      </button>
+      <button class="icon-btn navbar__burger" data-burger aria-label="Abrir menú" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<div class="overlay" data-overlay></div>
+<aside class="drawer" data-drawer aria-hidden="true" aria-label="Carrito de compra">
+  <div class="drawer__head">
+    <h2 class="drawer__title">Tu carrito</h2>
+    <button class="icon-btn" data-drawer-close aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="drawer__body" data-drawer-lines></div>
+  <div class="drawer__foot" data-drawer-foot>
+    <div class="summary__row summary__row--total"><span>Subtotal</span><span class="price" data-drawer-subtotal>—</span></div>
+    <a class="btn btn--dark btn--block btn--lg" href="checkout.html" style="margin-top:var(--space-4)">Ir a pagar</a>
+    <a class="btn btn--ghost btn--block" href="carrito.html" style="margin-top:var(--space-2)">Ver carrito completo</a>
+  </div>
+</aside>
+<main data-pdp>
+  <section class="section--tight" style="padding-top:var(--space-6)">
+    <div class="container">
+      <p class="soft" style="font-size:var(--fs-sm);margin-bottom:var(--space-5)">
+        <a href="index.html">Inicio</a> / <a href="catalogo.html">Catálogo</a> /
+        <a href="catalogo.html"><span data-pdp-breadcrumb-terr>Contención</span></a> /
+        <span class="muted" data-pdp-breadcrumb-name>Producto</span>
+      </p>
+
+      <div class="pdp">
+        <!-- Galería -->
+        <div class="gallery">
+          <div class="gallery__thumbs" data-gallery-thumbs></div>
+          <div class="gallery__main"><img src="" alt="Producto Nanai Nanai" data-gallery-main></div>
+        </div>
+
+        <!-- Panel de compra -->
+        <div class="buy-panel">
+          <div>
+            <span class="tag tag--contencion" data-pdp-tag style="margin-bottom:var(--space-3)">Contención</span>
+            <h1 class="buy-panel__title" data-pdp-title>Producto</h1>
+          </div>
+
+          <div class="rating">
+            <span class="rating__stars" data-pdp-rating-stars>★★★★★</span>
+            <span class="rating__count"><a href="#resenas" data-pdp-review-count>Reseñas</a></span>
+          </div>
+
+          <div class="buy-panel__price-row">
+            <span class="price" data-pdp-price>—</span>
+            <span class="buy-panel__tax">Impuesto incluido. Los gastos de envío se calculan en la pantalla de pago.</span>
+          </div>
+
+          <div class="buy-panel__meta">
+            <span class="stock-badge" data-pdp-stock></span>
+          </div>
+
+          <hr class="divider">
+
+          <div class="field buy-panel__section">
+            <label class="label" for="tarjeton">Tarjetón <span class="soft">· elige tu mensaje</span></label>
+            <select class="select" id="tarjeton" name="tarjeton" data-tarjeton></select>
+          </div>
+
+          <div class="field buy-panel__section">
+            <label class="label" for="mensaje">Tarjeta con mensaje personalizado de quién envía</label>
+            <textarea class="textarea" id="mensaje" data-msg maxlength="380" data-counter="cnt-msg" placeholder="Escribe aquí tu mensaje…"></textarea>
+            <span class="char-counter" id="cnt-msg">0 / 380</span>
+          </div>
+
+          <div class="field">
+            <label class="label" for="firma">Nombre de quién firma el mensaje</label>
+            <input class="input" id="firma" data-firma type="text" placeholder="Ej: Con cariño, Cata y Javi">
+          </div>
+
+          <div class="cluster" style="margin-top:var(--space-3)">
+            <div class="qty" aria-label="Cantidad">
+              <button type="button" data-step="-1" aria-label="Restar">−</button>
+              <output>1</output>
+              <button type="button" data-step="1" aria-label="Sumar">+</button>
+            </div>
+            <button class="btn btn--dark btn--lg" style="flex:1" data-add-to-cart data-drawer-open>Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detalle -->
+      <div class="pdp-detail">
+        <p class="pdp-detail__lead" data-pdp-lead>—</p>
+        <div class="accordion">
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="true">Contenido de la caja <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+            <div class="accordion__panel" data-open="true"><div><div class="accordion__panel-inner">
+              <ul class="content-list" data-pdp-content></ul>
+            </div></div></div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">Despacho y plazos <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></button>
+            <div class="accordion__panel" data-open="false"><div><div class="accordion__panel-inner">
+              <div class="note">
+                <strong>Notas importantes de despacho</strong>
+                <ul>
+                  <li>Algunas clínicas y velatorios tienen restricciones de ingreso: confirma la recepción antes de comprar.</li>
+                  <li>Despacho vía Chilexpress. Santiago: 24 a 48 hrs hábiles. Regiones: 2 a 4 días hábiles.</li>
+                  <li>Entregas en Santiago pueden coordinarse el mismo día según horario de compra.</li>
+                  <li>Regiones extremas pueden tener plazos adicionales.</li>
+                </ul>
+              </div>
+            </div></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reseñas -->
+      <section class="pdp-reviews" id="resenas">
+        <div class="section-head"><span class="overline">Valoraciones</span><h2>Lo que dicen quienes acompañaron</h2></div>
+        <div class="reviews-grid" data-pdp-reviews></div>
+      </section>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="../images/logo/landscape_white.svg" alt="Nanai Nanai">
+        <p>No regalamos objetos. Acompañamos momentos. Cajas sensoriales para los instantes en que las palabras no alcanzan.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Navegación</h4>
+        <ul><li><a href="index.html">Inicio</a></li><li><a href="catalogo.html">Catálogo</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="contacto.html">Contacto</a></li></ul>
+      </div>
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <ul><li><a href="terminos.html">Términos y condiciones</a></li><li><a href="privacidad.html">Política de privacidad</a></li></ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Nanai Nanai · Hecho con cuidado en Chile</span>
+      <div class="footer__social"><a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></div>
+    </div>
+  </div>
+</footer>
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/pdp.js"></script>
+<script src="js/tienda.js"></script>
+</body>
+</html>
